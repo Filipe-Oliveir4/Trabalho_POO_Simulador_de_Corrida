@@ -1,0 +1,46 @@
+package br;
+
+import java.util.Scanner;
+
+public class MainSimulador {
+
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		int linhaDeChegada,velocidadeRodadaC1,velocidadeRodadaC2,rodada=1;
+		Carro carro1 = new Carro();
+		Carro carro2 = new Carro();
+		System.out.println("Qual a distancia da linha de chagada?");
+		linhaDeChegada=ent.nextInt();
+		while(carro1.getDistancia()<=linhaDeChegada&&carro2.getDistancia()<=linhaDeChegada) {
+			velocidadeRodadaC1=carro1.rodada();
+			velocidadeRodadaC2=carro2.rodada();
+			imprimirVelocidadesRodada(velocidadeRodadaC1, velocidadeRodadaC2,rodada);
+			imprimirCorrida(carro1, carro2);
+			rodada++;
+		}
+		imprimirVencedor(carro1, carro2);
+		ent.close();
+	}
+	
+	public static void imprimirCorrida(Carro carro1,Carro carro2) {
+		String  linha="--------------------------------------------------------";
+		System.out.println(linha);
+		System.out.println(carro1.getposicao());
+		System.out.println(carro2.getposicao());
+		System.out.println(linha+"\n\n");
+	}
+	
+	public static void imprimirVelocidadesRodada(int VelocidadeC1, int velocidadeC2,int rodada) {
+		System.out.println("Rodada "+rodada+"\nAs velocidades na rodada:\nCarro1: "+VelocidadeC1+"\nCarro2: "+velocidadeC2);
+	}
+	
+	public static void imprimirVencedor(Carro carro1,Carro carro2) {
+		if(carro1.getDistancia()>carro2.getDistancia()) {
+			System.out.println("Carro 1 ganhou!!!");
+		}else if(carro1.getDistancia()<carro2.getDistancia()) {
+			System.out.println("Carro 2 ganhou!!!");
+		}else {
+			System.out.println("Empatou!!!");
+		}
+	}	
+}

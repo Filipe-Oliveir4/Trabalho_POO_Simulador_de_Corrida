@@ -1,0 +1,21 @@
+package br;
+
+import java.util.Scanner;
+
+public class MainSimulador {
+
+	public static void main(String[] args) {
+		Scanner ent = new Scanner(System.in);
+		String  linha="--------------------------------------------------------";
+		Carro carro1 = new Carro();
+		Carro carro2 = new Carro();
+		System.out.println("Qual a distancia da linha de chagada?");
+		int linhaDeChegada=ent.nextInt();
+		while(carro1.getDistancia()<linhaDeChegada&&carro2.getDistancia()<linhaDeChegada) {
+			
+		}
+		
+	}
+	
+
+}

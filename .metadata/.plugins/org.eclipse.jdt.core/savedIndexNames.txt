@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Filipe Miranda\Desktop\Trabalho POO\Trabalho_POO_Simulador_de_Corrida\.metadata\.plugins\org.eclipse.jdt.core
+2072337337.index
+351338488.index
+1865797976.index

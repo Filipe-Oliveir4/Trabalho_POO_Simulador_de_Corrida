@@ -1,0 +1,13 @@
+package br;
+
+public class MainSimulador {
+
+	public static void main(String[] args) {
+		Carro carro1 = new Carro();
+		
+		System.out.println(carro1.posicao());
+		carro1.rodada();
+		System.out.println(carro1.posicao());
+	}
+
+}
